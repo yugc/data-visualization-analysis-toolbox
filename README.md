@@ -1,7 +1,7 @@
 # data-visualization-analysis-toolbox
 MATLAB data visualization and analysis toolbox for Synchrotron X-ray and other scientific applications   
 
-Data Analysis and Visualization Toolbox is a collection of GUI Matlab programs for managing, visualizing and analyzing data collected from various kinds of experiments. While these programs were initially designed for X-ray SPEC files and Quantum Design devices, they can be easily adapted for wide range of applications. For example, the programs have been used to automate EDX data analysis, and to analyze high-magnetic-field transport data at Laboratoire National des Champs Magnétiques Intenses, France. 
+Data Analysis and Visualization Toolbox is a collection of GUI Matlab programs for managing, visualizing and analyzing data collected from various kinds of scientific experiments. While these programs were initially designed for X-ray SPEC files and Quantum Design devices, they can be easily adapted for wide range of applications. For example, the programs have been used to automate EDX data analysis, and to analyze high-magnetic-field transport data at Laboratoire National des Champs Magnétiques Intenses, France. 
 
 Data Visualization
 
