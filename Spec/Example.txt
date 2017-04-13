@@ -1,0 +1,38 @@
+% (Optional) set input and output buffer. By default, input is data, output is buffer 1
+input  data
+output  buffer 1 
+
+% (Optional) set tolerance to 0.001. By default, spcplot use tolerance from the graphic user interface
+tol  0.001
+
+% Set which data field is used as index 
+index  Scan_Number
+
+% Set X and Y columns
+column  'Eta', 'MCA_Detector'
+
+% Average data (with 'No' values equal) 1,2,3,6
+average  [1:3 6], Eta Scan, 1
+
+% Subtract data 8 from the average of data 1,2 
+subtract  [1 2], 8, Eta Scan difference, 2
+
+% Set X, Y and Monitor columns, and set what monitor number to normalize to  
+column  'Eta', 'MCA_Detector', , 'Monitor'
+monitor  1000
+
+% Average monitor normalized data 1,2,3,6
+average  [1:3 6], Eta Scan (mon 1000), 3
+subtract  [1 2], 8, Eta Scan difference (mon 1000), 4
+
+% Change input from data to buffer 1, set index and data columns
+input  buffer 1
+index   ID
+column  1, 2
+
+% Normalize the data with ‘ID’ value 1, 3 to the Y range [0 1] 
+normalize  [1 3], 7.899  7.901  8.058  8.062  0  1
+
+% Get the difference between results 1 and 3, save the result to buffer 2
+output  buffer 2
+subtract  1, 3, Difference between data with/without monitor normalization
